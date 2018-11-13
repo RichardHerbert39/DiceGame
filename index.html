@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dice Rolling</title>
+        <link href="Style/style.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <header>Please Choose Your Dice:</header>
+        <div id="DiceBar">
+            <div class="dice" id="D4">
+                <img id="1D4" src="Images/D4/D4Choice.png" alt="D4"><br/>
+                <div class="input">
+                    <button id="4minus" class="minus">-</button>
+                    <input id="4number" min=0 max=10 value=0 class="number" type="number">
+                    <button id="4plus" class="plus">+</button>
+                </div>
+            </div>
+            <div class="dice" id="D6">
+                <img id="1D6" src="Images/D6/D6Choice.png" alt="D6"><br/>
+                <div class="input">
+                    <button id="6minus" class="minus">-</button>
+                    <input id="6number" min=0 max=10 value=0 class="number" type="number">
+                    <button id="6plus" class="plus">+</button>
+                </div>
+            </div>
+            <div class="dice" id="D8">
+                <img id="1D8" src="Images/D8/D8Choice.png" alt="D8"><br/>
+                <div class="input">
+                    <button id="8minus" class="minus">-</button>
+                    <input id="8number" min=0 max=10 value=0 class="number" type="number">
+                    <button id="8plus" class="plus">+</button>
+                </div>
+            </div>
+            <div class="dice" id="D10">
+                <img id="1D10" src="Images/D10/D10Choice.png" alt="D10"><br/>
+                <div class="input">
+                    <button id="10minus" class="minus">-</button>
+                    <input id="10number" min=0 max=10 value=0 class="number" type="number">
+                    <button id="10plus" class="plus">+</button>
+                </div>
+            </div>
+            <div class="dice" id="D12">
+                <img id="1D12" src="Images/D12/D12Choice.png" alt="D12"><br/>
+                <div class="input">
+                    <button id="12minus" class="minus">-</button>
+                    <input id="12number" min=0 max=10 value=0 class="number" type="number">
+                    <button id="12plus" class="plus">+</button>
+                </div>
+            </div>
+            <div class="dice" id="D20">
+                <img id="1D20" src="Images/D20/D20Choice.png" alt="D20"><br/>
+                <div class="input">
+                    <button id="20minus" class="minus">-</button>
+                    <input id="20number" min=0 max=10 value=0 class="number" type="number">
+                    <button id="20plus" class="plus">+</button>
+                </div>
+            </div>
+        </div>
+        <div id="Buttons">
+            <button id="Roll">Roll</button>
+            <button id="Clear">Clear</button>
+        </div>
+        <div id="Result">You can roll a maximum of 10 dice of each type.<br/>
+            Alternatively, click on a die to roll one of it.</div>
+        <script  src="Scripts/script.js" type="text/javascript"></script>
+    </body>
+</html>

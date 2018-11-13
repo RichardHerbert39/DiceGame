@@ -1,0 +1,81 @@
+body {
+    background-color: aqua;
+}
+button:focus, input:focus {
+    outline: none;
+}
+#Result {
+    width: 80%;
+    padding: 10px;
+    position: relative;
+    left: 10%;
+    border: 2px solid brown;
+    margin-left: -12px;
+    margin-top: 40px;
+    background-color: burlywood;
+}
+#Buttons {
+    clear: both;
+    position: relative;
+    top: 20px;
+    left: 50%;
+    margin-left: -30px;
+}
+#Buttons > button {
+    width: 60px;
+    border-radius: 5px;
+}
+#Clear {
+    display: none;
+}
+.input {
+    height: 23px;
+    width: 90px;
+    background-color: beige;
+    border: 1px solid gray;
+    border-radius: 11px;
+    position: relative;
+    left: 5px;
+}
+.plus, .minus {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 1px solid gray;
+    border-radius: 11px;
+    background-color: beige;
+    position: relative;
+}
+.plus {
+    padding-left: 7px;
+    padding-right: 7px;
+    border-right: none;
+    float: right;
+}
+.minus {
+    padding-left: 8px;
+    padding-right: 9px;
+    border-left: none;
+    float: left;
+}
+.minus:active, .plus:active {
+    background-color: darkgray;
+}
+#DiceBar > div {
+    float: left;
+    display: inline-block;
+    margin-right: 25px;
+}
+.number {
+    width: 35px;
+    position: relative;
+    left: 5px;
+    top: 1px;
+    text-align: center;
+    background-color: beige;
+    border: none;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
