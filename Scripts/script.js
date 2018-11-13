@@ -268,6 +268,7 @@ var four = new DieInput("4plus", "4number", "4minus"),
         resultBox.innerHTML = "";
         if (four.number.value != 0) {
             prev = true;
+            four.number.value = Math.ceil(four.number.value);
             resultBox.innerHTML += four.number.value + "d4";
             rollDice(4, four.number.value);
         }
@@ -276,6 +277,7 @@ var four = new DieInput("4plus", "4number", "4minus"),
                 resultBox.innerHTML += "<br/>";
             }
             prev = true;
+            six.number.value = Math.ceil(six.number.value);
             resultBox.innerHTML += six.number.value + "d6";
             rollDice(6, six.number.value);
         }
@@ -284,6 +286,7 @@ var four = new DieInput("4plus", "4number", "4minus"),
                 resultBox.innerHTML += "<br/>";
             }
             prev = true;
+            eight.number.value = Math.ceil(eight.number.value);
             resultBox.innerHTML += eight.number.value + "d8";
             rollDice(8, eight.number.value);
         }
@@ -292,6 +295,7 @@ var four = new DieInput("4plus", "4number", "4minus"),
                 resultBox.innerHTML += "<br/>";
             }
             prev = true;
+            ten.number.value = Math.ceil(ten.number.value);
             resultBox.innerHTML += ten.number.value + "d10";
             rollDice(10, ten.number.value);
         }
@@ -300,6 +304,7 @@ var four = new DieInput("4plus", "4number", "4minus"),
                 resultBox.innerHTML += "<br/>";
             }
             prev = true;
+            twelve.number.value = Math.ceil(twelve.number.value);
             resultBox.innerHTML += twelve.number.value + "d12";
             rollDice(12, twelve.number.value);
         }
@@ -308,6 +313,7 @@ var four = new DieInput("4plus", "4number", "4minus"),
                 resultBox.innerHTML += "<br/>";
             }
             prev = true;
+            twenty.number.value = Math.ceil(twenty.number.value);
             resultBox.innerHTML += twenty.number.value + "d20";
             rollDice(20, twenty.number.value);
         }
