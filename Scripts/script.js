@@ -266,13 +266,13 @@ var four = new DieInput("4plus", "4number", "4minus"),
     roll = function () {
         var prev = false;
         resultBox.innerHTML = "";
-        if (four.number.value != 0) {
+        if (four.number.value > 0) {
             prev = true;
             four.number.value = Math.ceil(four.number.value);
             resultBox.innerHTML += four.number.value + "d4";
             rollDice(4, four.number.value);
         }
-        if (six.number.value != 0) {
+        if (six.number.value > 0) {
             if (prev) {
                 resultBox.innerHTML += "<br/>";
             }
@@ -281,7 +281,7 @@ var four = new DieInput("4plus", "4number", "4minus"),
             resultBox.innerHTML += six.number.value + "d6";
             rollDice(6, six.number.value);
         }
-        if (eight.number.value != 0) {
+        if (eight.number.value > 0) {
             if (prev) {
                 resultBox.innerHTML += "<br/>";
             }
@@ -290,7 +290,7 @@ var four = new DieInput("4plus", "4number", "4minus"),
             resultBox.innerHTML += eight.number.value + "d8";
             rollDice(8, eight.number.value);
         }
-        if (ten.number.value != 0) {
+        if (ten.number.value > 0) {
             if (prev) {
                 resultBox.innerHTML += "<br/>";
             }
@@ -299,7 +299,7 @@ var four = new DieInput("4plus", "4number", "4minus"),
             resultBox.innerHTML += ten.number.value + "d10";
             rollDice(10, ten.number.value);
         }
-        if (twelve.number.value != 0) {
+        if (twelve.number.value > 0) {
             if (prev) {
                 resultBox.innerHTML += "<br/>";
             }
@@ -308,7 +308,7 @@ var four = new DieInput("4plus", "4number", "4minus"),
             resultBox.innerHTML += twelve.number.value + "d12";
             rollDice(12, twelve.number.value);
         }
-        if (twenty.number.value != 0) {
+        if (twenty.number.value > 0) {
             if (prev) {
                 resultBox.innerHTML += "<br/>";
             }
