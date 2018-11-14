@@ -37,13 +37,12 @@ button:focus, input:focus {
     display: inline-block;
     float: left;
 }
-.total, .add {
+.add {
     position: relative;
     bottom: 50px;
     right: 5px;
 }
 .total {
-    right: 20px;
     overflow-x: visible;
     font-size: 0.8em;
 }

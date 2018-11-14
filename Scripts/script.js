@@ -260,7 +260,7 @@ var four = new DieInput("4plus", "4number", "4minus"),
             i++;
         }
         if (number > 1) {
-            resultBox.innerHTML += " <span class='total'>Total:" + total
+            resultBox.innerHTML += "<br/><br/><span class='total'>Total:" + total
                 + "</span>";
         }
     },
@@ -278,7 +278,7 @@ var four = new DieInput("4plus", "4number", "4minus"),
         }
         if (six.number.value > 0) {
             if (prev) {
-                resultBox.innerHTML += "<br/><br/><br/>";
+                resultBox.innerHTML += "<br/><br/>";
             }
             prev = true;
             six.number.value = Math.ceil(six.number.value);
@@ -289,7 +289,7 @@ var four = new DieInput("4plus", "4number", "4minus"),
         }
         if (eight.number.value > 0) {
             if (prev) {
-                resultBox.innerHTML += "<br/><br/><br/>";
+                resultBox.innerHTML += "<br/><br/>";
             }
             prev = true;
             eight.number.value = Math.ceil(eight.number.value);
@@ -300,7 +300,7 @@ var four = new DieInput("4plus", "4number", "4minus"),
         }
         if (ten.number.value > 0) {
             if (prev) {
-                resultBox.innerHTML += "<br/><br/><br/>";
+                resultBox.innerHTML += "<br/><br/>";
             }
             prev = true;
             ten.number.value = Math.ceil(ten.number.value);
@@ -311,7 +311,7 @@ var four = new DieInput("4plus", "4number", "4minus"),
         }
         if (twelve.number.value > 0) {
             if (prev) {
-                resultBox.innerHTML += "<br/><br/><br/>";
+                resultBox.innerHTML += "<br/><br/>";
             }
             prev = true;
             twelve.number.value = Math.ceil(twelve.number.value);
@@ -322,7 +322,7 @@ var four = new DieInput("4plus", "4number", "4minus"),
         }
         if (twenty.number.value > 0) {
             if (prev) {
-                resultBox.innerHTML += "<br/><br/><br/>";
+                resultBox.innerHTML += "<br/><br/>";
             }
             prev = true;
             twenty.number.value = Math.ceil(twenty.number.value);
