@@ -33,10 +33,6 @@ button:focus, input:focus {
 #Clear {
     display: none;
 }
-.die {
-    display: inline-block;
-    float: left;
-}
 .add {
     position: relative;
     bottom: 50px;
@@ -45,12 +41,6 @@ button:focus, input:focus {
 .total {
     overflow-x: visible;
     font-size: 0.8em;
-}
-.individual {
-    position: relative;
-    right: 65px;
-    top: 5px;
-    font-size: 0.75em;
 }
 .resultImage {
     margin: 10px;
