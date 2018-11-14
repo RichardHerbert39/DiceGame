@@ -38,10 +38,16 @@ button:focus, input:focus {
     bottom: 50px;
     right: 5px;
 }
+.total {
+    right: 25px;
+    overflow-x: visible;
+    font-size: 0.8em;
+}
 .individual {
     position: relative;
     right: 65px;
     top: 5px;
+    font-size: 0.75em;
 }
 .resultImage {
     margin: 10px;
