@@ -56,10 +56,9 @@ var four = new DieInput("4plus", "4number", "4minus"),
         var i = 0,
             total = 0,
             roll = 0;
-        resultBox.innerHTML += ":";
         while (i < number) {
             if (i != 0) {
-                resultBox.innerHTML += " +";
+                resultBox.innerHTML += "<span class='add'>+</span>";
             }
             roll = Math.ceil(Math.random() * sides);
             if (sides == 4) {
@@ -254,12 +253,13 @@ var four = new DieInput("4plus", "4number", "4minus"),
                     resultBox.innerHTML += "<img src='Images/D20/D20Twenty.png' alt='Sorry, your browser does not support this image' class='resultImage'>";
                 }
             }
-            resultBox.innerHTML += " " + roll;
+            resultBox.innerHTML += "<span class='individual'>" + roll + "</span>";
             total += roll;
             i++;
         }
         if (number > 1) {
-            resultBox.innerHTML += " Total: " + total;
+            resultBox.innerHTML += " <span class='total'>Total: " + total
+                + "</span>";
         }
     },
     //functions and variables for the roll and clear buttons
@@ -269,57 +269,69 @@ var four = new DieInput("4plus", "4number", "4minus"),
         if (four.number.value > 0) {
             prev = true;
             four.number.value = Math.ceil(four.number.value);
-            resultBox.innerHTML += four.number.value + "d4";
+            resultBox.innerHTML += "<div classe='result'>" + four.number.value
+                + "d4:<br/>";
             rollDice(4, four.number.value);
+            resultBox.innerHTML += "</div>";
         }
         if (six.number.value > 0) {
             if (prev) {
-                resultBox.innerHTML += "<br/>";
+                resultBox.innerHTML += "<br/><br/><br/>";
             }
             prev = true;
             six.number.value = Math.ceil(six.number.value);
-            resultBox.innerHTML += six.number.value + "d6";
+            resultBox.innerHTML += "<div classe='result'>" + six.number.value
+                + "d6:<br/>";
             rollDice(6, six.number.value);
+            resultBox.innerHTML += "</div>";
         }
         if (eight.number.value > 0) {
             if (prev) {
-                resultBox.innerHTML += "<br/>";
+                resultBox.innerHTML += "<br/><br/><br/>";
             }
             prev = true;
             eight.number.value = Math.ceil(eight.number.value);
-            resultBox.innerHTML += eight.number.value + "d8";
+            resultBox.innerHTML += "<div classe='result'>" + eight.number.value
+                + "d8:<br/>";
             rollDice(8, eight.number.value);
+            resultBox.innerHTML += "</div>";
         }
         if (ten.number.value > 0) {
             if (prev) {
-                resultBox.innerHTML += "<br/>";
+                resultBox.innerHTML += "<br/><br/><br/>";
             }
             prev = true;
             ten.number.value = Math.ceil(ten.number.value);
-            resultBox.innerHTML += ten.number.value + "d10";
+            resultBox.innerHTML += "<div classe='result'>" + ten.number.value
+                + "d10:<br/>";
             rollDice(10, ten.number.value);
+            resultBox.innerHTML += "</div>";
         }
         if (twelve.number.value > 0) {
             if (prev) {
-                resultBox.innerHTML += "<br/>";
+                resultBox.innerHTML += "<br/><br/><br/>";
             }
             prev = true;
             twelve.number.value = Math.ceil(twelve.number.value);
-            resultBox.innerHTML += twelve.number.value + "d12";
+            resultBox.innerHTML += "<div classe='result'>" + twelve.number.value
+                + "d12:<br/>";
             rollDice(12, twelve.number.value);
+            resultBox.innerHTML += "</div>";
         }
         if (twenty.number.value > 0) {
             if (prev) {
-                resultBox.innerHTML += "<br/>";
+                resultBox.innerHTML += "<br/><br/><br/>";
             }
             prev = true;
             twenty.number.value = Math.ceil(twenty.number.value);
-            resultBox.innerHTML += twenty.number.value + "d20";
+            resultBox.innerHTML += "<div classe='result'>" + twenty.number.value
+                + "d20:<br/>";
             rollDice(20, twenty.number.value);
+            resultBox.innerHTML += "</div>";
         }
         if (prev) {
             clearButton.style.display = "inline";
-            buttons.style.marginLeft = "-60px";
+            buttons.style.marginLeft = "-120px";
         }
         else {
             resultBox.innerHTML = "Please choose some dice.";
@@ -329,7 +341,7 @@ var four = new DieInput("4plus", "4number", "4minus"),
         resultBox.innerHTML = 
             "You can roll a maximum of 10 dice of each type.<br/>Alternatively, click on a die to roll one of it.";
         clearButton.style.display = "none";
-        buttons.style.marginLeft = "-30px";
+        buttons.style.marginLeft = "-60px";
         four.number.value = 0;
         six.number.value = 0;
         eight.number.value = 0;

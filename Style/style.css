@@ -1,5 +1,7 @@
 body {
-    background-color: darkcyan;
+    padding-top: 25px;
+    background-color: #708090;
+    font-size: 1.25em;
 }
 button:focus, input:focus {
     outline: none;
@@ -9,30 +11,46 @@ button:focus, input:focus {
     padding: 10px;
     position: relative;
     left: 10%;
-    border: 2px solid brown;
+    border: 2px solid #a52a2a;
     margin-left: -12px;
     margin-top: 40px;
-    background-color: burlywood;
+    background-color: #deb887;
 }
 #Buttons {
     clear: both;
     position: relative;
     top: 20px;
     left: 50%;
-    margin-left: -30px;
+    margin-left: -60px;
 }
 #Buttons > button {
-    width: 60px;
+    width: 120px;
+    height: 30px;
+    border-color: #8c8c8c;
+    background-color: #bfbfbf;
     border-radius: 5px;
 }
 #Clear {
     display: none;
 }
+.total, .add {
+    position: relative;
+    bottom: 50px;
+    right: 5px;
+}
+.individual {
+    position: relative;
+    right: 65px;
+    top: 5px;
+}
+.resultImage {
+    margin: 10px;
+}
 .input {
     height: 23px;
     width: 90px;
-    background-color: beige;
-    border: 1px solid gray;
+    background-color: #f5f5dc;
+    border: 1px solid #808080;
     border-radius: 11px;
     position: relative;
     left: 5px;
@@ -40,9 +58,9 @@ button:focus, input:focus {
 .plus, .minus {
     padding-top: 3px;
     padding-bottom: 3px;
-    border: 1px solid gray;
+    border: 1px solid #808080;
     border-radius: 11px;
-    background-color: beige;
+    background-color: #f5f5dc;
     position: relative;
 }
 .plus {
@@ -58,24 +76,33 @@ button:focus, input:focus {
     float: left;
 }
 .minus:active, .plus:active {
-    background-color: darkgray;
+    background-color: #a9a9a9;
 }
 #DiceBar > div {
-    float: left;
     display: inline-block;
     margin-right: 25px;
+}
+#DiceBar {
+    position: relative;
+    left: 50%;
+    margin-left: -375px;
 }
 .number {
     width: 35px;
     position: relative;
     left: 5px;
-    top: 1px;
+    bottom: 1px;
     text-align: center;
-    background-color: beige;
+    background-color: #f5f5dc;
     border: none;
 }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
+}
+header {
+    position: relative;
+    left: 50%;
+    margin-left: -125px;
 }
