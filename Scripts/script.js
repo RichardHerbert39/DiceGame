@@ -61,6 +61,7 @@ var four = new DieInput("4plus", "4number", "4minus"),
                 resultBox.innerHTML += "<span class='add'>+</span>";
             }
             roll = Math.ceil(Math.random() * sides);
+            resultBox.innerHTML += "<div class='die'>"
             if (sides == 4) {
                 if (roll == 1) {
                     resultBox.innerHTML += "<img src='Images/D4/D4One.png' alt='Sorry, your browser does not support this image' class='resultImage'>";
@@ -253,12 +254,13 @@ var four = new DieInput("4plus", "4number", "4minus"),
                     resultBox.innerHTML += "<img src='Images/D20/D20Twenty.png' alt='Sorry, your browser does not support this image' class='resultImage'>";
                 }
             }
-            resultBox.innerHTML += "<span class='individual'>" + roll + "</span>";
+            resultBox.innerHTML += "<span class='individual'>" + roll 
+                + "</span></div>";
             total += roll;
             i++;
         }
         if (number > 1) {
-            resultBox.innerHTML += " <span class='total'>Total: " + total
+            resultBox.innerHTML += " <span class='total'>Total:" + total
                 + "</span>";
         }
     },
