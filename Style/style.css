@@ -1,42 +1,46 @@
 body {
     padding-top: 25px;
-    background-color: #708090;
+    background-color: #00c4de;
     font-size: 1.25em;
 }
 button:focus, input:focus {
     outline: none;
 }
 #Result {
-    width: 80%;
+	display: none;
+	height: 90%;
     padding: 10px;
-    position: relative;
-    left: 10%;
     border: 2px solid #a52a2a;
-    margin-left: -12px;
     margin-top: 40px;
     background-color: #deb887;
+}
+@media only screen and (min-width: 768px) {
+	#Result{
+		display: block;
+		height: auto;
+	}
 }
 #Buttons {
     clear: both;
     position: relative;
     top: 20px;
-    left: 50%;
-    margin-left: -60px;
 }
-#Buttons > button {
-    width: 120px;
-    height: 30px;
-    border-color: #8c8c8c;
-    background-color: #bfbfbf;
+#Buttons button {
+    height: 40px;
+	width: 150px;
     border-radius: 5px;
 }
-#Clear {
-    display: none;
+#Roll {
+	position: relative;
+    border-color: #a52a2a;
+    background-color: #deb887;
+	left: 100%;
+	margin-left: -145px;
 }
-.add {
-    position: relative;
-    bottom: 50px;
-    right: 5px;
+#Clear {
+    border-color: #7a1f1f;
+    background-color: #a52a2a;
+	margin-left: -5px;
 }
 .total {
     overflow-x: visible;
@@ -46,54 +50,51 @@ button:focus, input:focus {
     margin: 10px;
 }
 .input {
-    height: 23px;
-    width: 90px;
-    background-color: #f5f5dc;
-    border: 1px solid #808080;
-    border-radius: 11px;
+    height: 30px;
+    width: 100px;
+    background-color: #0f4dde;
+    border: 1px solid #000000;
+    border-radius: 15px;
     position: relative;
-    left: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 0.8em;
 }
 .plus, .minus {
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border: 1px solid #808080;
-    border-radius: 11px;
-    background-color: #f5f5dc;
+	color: #ddddff;
+	height: 28px;
+	width: 28px;
+    border: 1px solid #000000;
+    border-radius: 14px;
+    background-color: #0f4dde;
     position: relative;
 }
 .plus {
-    padding-left: 7px;
-    padding-right: 7px;
     border-right: none;
     float: right;
 }
 .minus {
-    padding-left: 8px;
-    padding-right: 9px;
     border-left: none;
     float: left;
 }
 .minus:active, .plus:active {
     background-color: #a9a9a9;
 }
-#DiceBar > div {
-    display: inline-block;
-    margin-right: 25px;
-}
-#DiceBar {
-    position: relative;
-    left: 50%;
-    margin-left: -375px;
-}
 .number {
+	color: #ddddff;
     width: 35px;
+	height: 20px;
     position: relative;
-    left: 5px;
-    bottom: 1px;
+    left: 3px;
+	top: 2px;
     text-align: center;
-    background-color: #f5f5dc;
+    background-color: #0f4dde;
     border: none;
+}
+.dice img {
+	position: relative;
+	left: 50%;
+	margin-left: -50px;
 }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -102,6 +103,5 @@ input[type=number]::-webkit-outer-spin-button {
 }
 header {
     position: relative;
-    left: 50%;
-    margin-left: -125px;
+	text-align: center;
 }

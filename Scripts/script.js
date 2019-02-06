@@ -51,8 +51,15 @@ var four = new DieInput("4plus", "4number", "4minus"),
     ten = new DieInput("10plus", "10number", "10minus"),
     twelve = new DieInput("12plus", "12number", "12minus"),
     twenty = new DieInput("20plus", "20number", "20minus"),
+	//a global variable to check whether the dice have been rolled
+	rolled = 0,
     //a function for rolling dice and displaying the result
     rollDice = function (sides, number) {
+		rolled = 1;
+		if (window.innerWidth < 768) {
+			diceBar.style.display = "none";
+			resultBox.style.display = "block";
+		}
         var i = 0,
             total = 0,
             roll = 0;
@@ -328,19 +335,18 @@ var four = new DieInput("4plus", "4number", "4minus"),
             rollDice(20, twenty.number.value);
             resultBox.innerHTML += "</div>";
         }
-        if (prev) {
-            clearButton.style.display = "inline";
-            buttons.style.marginLeft = "-120px";
-        }
-        else {
+        if (prev == false) {
             resultBox.innerHTML = "Please choose some dice.";
         }
     },
     clear = function () {
+		rolled = 0;
+		if (window.innerWidth < 768) {
+			diceBar.style.display = "flex";
+			resultBox.style.display = "none";
+		}
         resultBox.innerHTML = 
             "You can roll a maximum of 10 dice of each type.<br/>Alternatively, click on a die to roll one of it.";
-        clearButton.style.display = "none";
-        buttons.style.marginLeft = "-60px";
         four.number.value = 0;
         six.number.value = 0;
         eight.number.value = 0;
@@ -350,8 +356,9 @@ var four = new DieInput("4plus", "4number", "4minus"),
     },
     rollButton = document.getElementById("Roll"),
     clearButton = document.getElementById("Clear"),
-    buttons = document.getElementById("Buttons"),
     resultBox = document.getElementById("Result"),
+	//variable to store the dice bar
+	diceBar = document.getElementById("DiceBar"),
     //functions and variables for clicking on dice images
     d4 = document.getElementById("1D4"),
     d6 = document.getElementById("1D6"),
@@ -359,63 +366,59 @@ var four = new DieInput("4plus", "4number", "4minus"),
     d10 = document.getElementById("1D10"),
     d12 = document.getElementById("1D12"),
     d20 = document.getElementById("1D20"),
-    //these functions set all values to 0, except the intended one, which it sets to 1
-    //it then invokes the roll function
+    //these functions run the clear function, then set the intended value to 1
+    //they then invoke the roll function
     imageClick4 = function () {
+		clear();
         four.number.value = 1;
-        six.number.value = 0;
-        eight.number.value = 0;
-        ten.number.value = 0;
-        twelve.number.value = 0;
-        twenty.number.value = 0;
         roll();
     },
     imageClick6 = function () {
-        four.number.value = 0;
+		clear();
         six.number.value = 1;
-        eight.number.value = 0;
-        ten.number.value = 0;
-        twelve.number.value = 0;
-        twenty.number.value = 0;
         roll();
     },
     imageClick8 = function () {
-        four.number.value = 0;
-        six.number.value = 0;
+		clear();
         eight.number.value = 1;
-        ten.number.value = 0;
-        twelve.number.value = 0;
-        twenty.number.value = 0;
         roll();
     },
     imageClick10 = function () {
-        four.number.value = 0;
-        six.number.value = 0;
-        eight.number.value = 0;
+		clear();
         ten.number.value = 1;
-        twelve.number.value = 0;
-        twenty.number.value = 0;
         roll();
     },
     imageClick12 = function () {
-        four.number.value = 0;
-        six.number.value = 0;
-        eight.number.value = 0;
-        ten.number.value = 0;
+		clear();
         twelve.number.value = 1;
-        twenty.number.value = 0;
         roll();
     },
     imageClick20 = function () {
-        four.number.value = 0;
-        six.number.value = 0;
-        eight.number.value = 0;
-        ten.number.value = 0;
-        twelve.number.value = 0;
+		clear();
         twenty.number.value = 1;
         roll();
-    };
-//attaching functions to click events
+    },
+	//a function that checks the size of the window, and whether the dice have been rolled
+	//it then hides or shows elements as appropriate
+	sizeChanged = function() {
+		if (window.innerWidth < 768){
+			resultBox.style.height = "90%";
+			if (rolled == 1){
+				diceBar.style.display = "none";
+				resultBox.style.display = "block";
+			}
+			else {
+				diceBar.style.display = "flex";
+				resultBox.style.display = "none";
+			}
+		}
+		else {
+			resultBox.style.height = "auto";
+			diceBar.style.display = "flex";
+			resultBox.style.display = "block";
+		}
+	};
+//attaching functions to click events and window resize event
 rollButton.addEventListener("click", roll);
 clearButton.addEventListener("click", clear);
 d4.addEventListener("click", imageClick4);
@@ -424,3 +427,4 @@ d8.addEventListener("click", imageClick8);
 d10.addEventListener("click", imageClick10);
 d12.addEventListener("click", imageClick12);
 d20.addEventListener("click", imageClick20);
+window.addEventListener("resize", sizeChanged);
