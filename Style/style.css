@@ -78,7 +78,7 @@ button:focus, input:focus {
     float: left;
 }
 .minus:active, .plus:active {
-    background-color: #a9a9a9;
+    background-color: #0c3aa7;
 }
 .number {
 	color: #ddddff;

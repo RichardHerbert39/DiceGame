@@ -69,196 +69,22 @@ var four = new DieInput("4plus", "4number", "4minus"),
             }
             roll = Math.ceil(Math.random() * sides);
             if (sides == 4) {
-                if (roll == 1) {
-                    resultBox.innerHTML += "<img src='Images/D4/D4One.png' alt='Sorry, your browser does not support this image. You got a 1' class='resultImage'>";
-                }
-                else if (roll == 2) {
-                    resultBox.innerHTML += "<img src='Images/D4/D4Two.png' alt='Sorry, your browser does not support this image. You got a 2' class='resultImage'>";
-                }
-                else if (roll == 3) {
-                    resultBox.innerHTML += "<img src='Images/D4/D4Three.png' alt='Sorry, your browser does not support this image. You got a 3' class='resultImage'>";
-                }
-                else if (roll == 4) {
-                    resultBox.innerHTML += "<img src='Images/D4/D4Four.png' alt='Sorry, your browser does not support this image. You got a 4' class='resultImage'>";
-                }
+                resultBox.innerHTML += "<img src='Images/D4/D4_" + roll + ".png' alt='Sorry, your browser does not support this image. You got a " + roll + "' class='resultImage'>";
             }
             else if (sides == 6) {
-                if (roll == 1) {
-                    resultBox.innerHTML += "<img src='Images/D6/D6One.png' alt='Sorry, your browser does not support this image. You got a 1' class='resultImage'>";
-                }
-                else if (roll == 2) {
-                    resultBox.innerHTML += "<img src='Images/D6/D6Two.png' alt='Sorry, your browser does not support this image. You got a 2' class='resultImage'>";
-                }
-                else if (roll == 3) {
-                    resultBox.innerHTML += "<img src='Images/D6/D6Three.png' alt='Sorry, your browser does not support this image. You got a 3' class='resultImage'>";
-                }
-                else if (roll == 4) {
-                    resultBox.innerHTML += "<img src='Images/D6/D6Four.png' alt='Sorry, your browser does not support this image. You got a 4' class='resultImage'>";
-                }
-                else if (roll == 5) {
-                    resultBox.innerHTML += "<img src='Images/D6/D6Five.png' alt='Sorry, your browser does not support this image. You got a 5' class='resultImage'>";
-                }
-                else if (roll == 6) {
-                    resultBox.innerHTML += "<img src='Images/D6/D6Six.png' alt='Sorry, your browser does not support this image. You got a 6' class='resultImage'>";
-                }
+                resultBox.innerHTML += "<img src='Images/D6/D6_" + roll + ".png' alt='Sorry, your browser does not support this image. You got a " + roll + "' class='resultImage'>";
             }
             else if (sides == 8) {
-                if (roll == 1) {
-                    resultBox.innerHTML += "<img src='Images/D8/D8One.png' alt='Sorry, your browser does not support this image. You got a 1' class='resultImage'>";
-                }
-                else if (roll == 2) {
-                    resultBox.innerHTML += "<img src='Images/D8/D8Two.png' alt='Sorry, your browser does not support this image. You got a 2' class='resultImage'>";
-                }
-                else if (roll == 3) {
-                    resultBox.innerHTML += "<img src='Images/D8/D8Three.png' alt='Sorry, your browser does not support this image. You got a 3' class='resultImage'>";
-                }
-                else if (roll == 4) {
-                    resultBox.innerHTML += "<img src='Images/D8/D8Four.png' alt='Sorry, your browser does not support this image. You got a 4' class='resultImage'>";
-                }
-                else if (roll == 5) {
-                    resultBox.innerHTML += "<img src='Images/D8/D8Five.png' alt='Sorry, your browser does not support this image. You got a 5' class='resultImage'>";
-                }
-                else if (roll == 6) {
-                    resultBox.innerHTML += "<img src='Images/D8/D8Six.png' alt='Sorry, your browser does not support this image. You got a 6' class='resultImage'>";
-                }
-                else if (roll == 7) {
-                    resultBox.innerHTML += "<img src='Images/D8/D8Seven.png' alt='Sorry, your browser does not support this image. You got a 7' class='resultImage'>";
-                }
-                else if (roll == 8) {
-                    resultBox.innerHTML += "<img src='Images/D8/D8Eight.png' alt='Sorry, your browser does not support this image. You got a 8' class='resultImage'>";
-                }
+                resultBox.innerHTML += "<img src='Images/D8/D8_" + roll + ".png' alt='Sorry, your browser does not support this image. You got a " + roll + "' class='resultImage'>";
             }
             else if (sides == 10) {
-                if (roll == 1) {
-                    resultBox.innerHTML += "<img src='Images/D10/D10One.png' alt='Sorry, your browser does not support this image. You got a 1' class='resultImage'>";
-                }
-                else if (roll == 2) {
-                    resultBox.innerHTML += "<img src='Images/D10/D10Two.png' alt='Sorry, your browser does not support this image. You got a 2' class='resultImage'>";
-                }
-                else if (roll == 3) {
-                    resultBox.innerHTML += "<img src='Images/D10/D10Three.png' alt='Sorry, your browser does not support this image. You got a 3' class='resultImage'>";
-                }
-                else if (roll == 4) {
-                    resultBox.innerHTML += "<img src='Images/D10/D10Four.png' alt='Sorry, your browser does not support this image. You got a 4' class='resultImage'>";
-                }
-                else if (roll == 5) {
-                    resultBox.innerHTML += "<img src='Images/D10/D10Five.png' alt='Sorry, your browser does not support this image. You got a 5' class='resultImage'>";
-                }
-                else if (roll == 6) {
-                    resultBox.innerHTML += "<img src='Images/D10/D10Six.png' alt='Sorry, your browser does not support this image. You got a 6' class='resultImage'>";
-                }
-                else if (roll == 7) {
-                    resultBox.innerHTML += "<img src='Images/D10/D10Seven.png' alt='Sorry, your browser does not support this image. You got a 7' class='resultImage'>";
-                }
-                else if (roll == 8) {
-                    resultBox.innerHTML += "<img src='Images/D10/D10Eight.png' alt='Sorry, your browser does not support this image. You got a 8' class='resultImage'>";
-                }
-                else if (roll == 9) {
-                    resultBox.innerHTML += "<img src='Images/D10/D10Nine.png' alt='Sorry, your browser does not support this image. You got a 9' class='resultImage'>";
-                }
-                else if (roll == 10) {
-                    resultBox.innerHTML += "<img src='Images/D10/D10Ten.png' alt='Sorry, your browser does not support this image. You got a 10' class='resultImage'>";
-                }
+                resultBox.innerHTML += "<img src='Images/D10/D10_" + roll + ".png' alt='Sorry, your browser does not support this image. You got a " + roll + "' class='resultImage'>";
             }
             else if (sides == 12) {
-                if (roll == 1) {
-                    resultBox.innerHTML += "<img src='Images/D12/D12One.png' alt='Sorry, your browser does not support this image. You got a 1' class='resultImage'>";
-                }
-                else if (roll == 2) {
-                    resultBox.innerHTML += "<img src='Images/D12/D12Two.png' alt='Sorry, your browser does not support this image. You got a 2' class='resultImage'>";
-                }
-                else if (roll == 3) {
-                    resultBox.innerHTML += "<img src='Images/D12/D12Three.png' alt='Sorry, your browser does not support this image. You got a 3' class='resultImage'>";
-                }
-                else if (roll == 4) {
-                    resultBox.innerHTML += "<img src='Images/D12/D12Four.png' alt='Sorry, your browser does not support this image. You got a 4' class='resultImage'>";
-                }
-                else if (roll == 5) {
-                    resultBox.innerHTML += "<img src='Images/D12/D12Five.png' alt='Sorry, your browser does not support this image. You got a 5' class='resultImage'>";
-                }
-                else if (roll == 6) {
-                    resultBox.innerHTML += "<img src='Images/D12/D12Six.png' alt='Sorry, your browser does not support this image. You got a 6' class='resultImage'>";
-                }
-                else if (roll == 7) {
-                    resultBox.innerHTML += "<img src='Images/D12/D12Seven.png' alt='Sorry, your browser does not support this image. You got a 7' class='resultImage'>";
-                }
-                else if (roll == 8) {
-                    resultBox.innerHTML += "<img src='Images/D12/D12Eight.png' alt='Sorry, your browser does not support this image. You got a 8' class='resultImage'>";
-                }
-                else if (roll == 9) {
-                    resultBox.innerHTML += "<img src='Images/D12/D12Nine.png' alt='Sorry, your browser does not support this image. You got a 9' class='resultImage'>";
-                }
-                else if (roll == 10) {
-                    resultBox.innerHTML += "<img src='Images/D12/D12Ten.png' alt='Sorry, your browser does not support this image. You got a 10' class='resultImage'>";
-                }
-                else if (roll == 11) {
-                    resultBox.innerHTML += "<img src='Images/D12/D12Eleven.png' alt='Sorry, your browser does not support this image. You got a 11' class='resultImage'>";
-                }
-                else if (roll == 12) {
-                    resultBox.innerHTML += "<img src='Images/D12/D12Twelve.png' alt='Sorry, your browser does not support this image. You got a 12' class='resultImage'>";
-                }
+                resultBox.innerHTML += "<img src='Images/D12/D12_" + roll + ".png' alt='Sorry, your browser does not support this image. You got a " + roll + "' class='resultImage'>";
             }
             else if (sides == 20) {
-                if (roll == 1) {
-                    resultBox.innerHTML += "<img src='Images/D20/D20One.png' alt='Sorry, your browser does not support this image. You got a 1' class='resultImage'>";
-                }
-                else if (roll == 2) {
-                    resultBox.innerHTML += "<img src='Images/D20/D20Two.png' alt='Sorry, your browser does not support this image. You got a 2' class='resultImage'>";
-                }
-                else if (roll == 3) {
-                    resultBox.innerHTML += "<img src='Images/D20/D20Three.png' alt='Sorry, your browser does not support this image. You got a 3' class='resultImage'>";
-                }
-                else if (roll == 4) {
-                    resultBox.innerHTML += "<img src='Images/D20/D20Four.png' alt='Sorry, your browser does not support this image. You got a 4' class='resultImage'>";
-                }
-                else if (roll == 5) {
-                    resultBox.innerHTML += "<img src='Images/D20/D20Five.png' alt='Sorry, your browser does not support this image. You got a 5' class='resultImage'>";
-                }
-                else if (roll == 6) {
-                    resultBox.innerHTML += "<img src='Images/D20/D20Six.png' alt='Sorry, your browser does not support this image. You got a 6' class='resultImage'>";
-                }
-                else if (roll == 7) {
-                    resultBox.innerHTML += "<img src='Images/D20/D20Seven.png' alt='Sorry, your browser does not support this image. You got a 7' class='resultImage'>";
-                }
-                else if (roll == 8) {
-                    resultBox.innerHTML += "<img src='Images/D20/D20Eight.png' alt='Sorry, your browser does not support this image. You got a 8' class='resultImage'>";
-                }
-                else if (roll == 9) {
-                    resultBox.innerHTML += "<img src='Images/D20/D20Nine.png' alt='Sorry, your browser does not support this image. You got a 9' class='resultImage'>";
-                }
-                else if (roll == 10) {
-                    resultBox.innerHTML += "<img src='Images/D20/D20Ten.png' alt='Sorry, your browser does not support this image. You got a 10' class='resultImage'>";
-                }
-                else if (roll == 11) {
-                    resultBox.innerHTML += "<img src='Images/D20/D20Eleven.png' alt='Sorry, your browser does not support this image. You got a 11' class='resultImage'>";
-                }
-                else if (roll == 12) {
-                    resultBox.innerHTML += "<img src='Images/D20/D20Twelve.png' alt='Sorry, your browser does not support this image. You got a 12' class='resultImage'>";
-                }
-                else if (roll == 13) {
-                    resultBox.innerHTML += "<img src='Images/D20/D20Thirteen.png' alt='Sorry, your browser does not support this image. You got a 13' class='resultImage'>";
-                }
-                else if (roll == 14) {
-                    resultBox.innerHTML += "<img src='Images/D20/D20Fourteen.png' alt='Sorry, your browser does not support this image. You got a 14' class='resultImage'>";
-                }
-                else if (roll == 15) {
-                    resultBox.innerHTML += "<img src='Images/D20/D20Fifteen.png' alt='Sorry, your browser does not support this image. You got a 15' class='resultImage'>";
-                }
-                else if (roll == 16) {
-                    resultBox.innerHTML += "<img src='Images/D20/D20Sixteen.png' alt='Sorry, your browser does not support this image. You got a 16' class='resultImage'>";
-                }
-                else if (roll == 17) {
-                    resultBox.innerHTML += "<img src='Images/D20/D20Seventeen.png' alt='Sorry, your browser does not support this image. You got a 17' class='resultImage'>";
-                }
-                else if (roll == 18) {
-                    resultBox.innerHTML += "<img src='Images/D20/D20Eighteen.png' alt='Sorry, your browser does not support this image. You got a 18' class='resultImage'>";
-                }
-                else if (roll == 19) {
-                    resultBox.innerHTML += "<img src='Images/D20/D20Nineteen.png' alt='Sorry, your browser does not support this image. You got a 19' class='resultImage'>";
-                }
-                else if (roll == 20) {
-                    resultBox.innerHTML += "<img src='Images/D20/D20Twenty.png' alt='Sorry, your browser does not support this image. You got a 20' class='resultImage'>";
-                }
+                resultBox.innerHTML += "<img src='Images/D20/D20_" + roll + ".png' alt='Sorry, your browser does not support this image. You got a " + roll + "' class='resultImage'>";
             }
             total += roll;
             i++;
